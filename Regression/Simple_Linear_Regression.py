@@ -11,6 +11,8 @@ m = np.sum((advertising_costs - mean_adv) * (sales - mean_sales)) / np.sum((adve
 c = mean_sales - m * mean_adv #Coefficients Calculation
 
 print(f"Model: Sales = {c:.2f} + {m:.2f}*Advertising_Costs") #Finally; Model: Sales = 220.00 + 1.20*Advertising_Costs
+#'f' is used to format the evaluated expression inside "", as a string
+#'{c:.2f}' this embeds the c variable into floating string
 
 plt.scatter(advertising_costs, sales, color = 'blue')
 plt.plot(advertising_costs, c + m * advertising_costs, color = 'red')
